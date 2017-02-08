@@ -235,6 +235,20 @@ AlexaGoogleSearch.prototype.intentHandlers = {
 					}
 				}
             }
+			
+			//translation
+			if (!found && $('._Ejb',body).length>0){
+
+				found = $('._Ejb',body).html();
+				console.log("Found name list");
+			}
+			
+			//medical
+			if (!found && $('._NId',body).length>0){
+
+				found = $('._NId',body).html();
+				console.log("Found name list");
+			}
 
                         			//name list
 			if (!found && $('#_vBb',body).length>0){
