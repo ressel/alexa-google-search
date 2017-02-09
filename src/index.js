@@ -357,7 +357,7 @@ AlexaGoogleSearch.prototype.intentHandlers = {
 				console.log("Found maths");					
 			}
 			
-^			//translation
+			//translation
 			if (!found && $('._Ejb',body).length>0){
 
 				found = $('._Ejb',body).html();
