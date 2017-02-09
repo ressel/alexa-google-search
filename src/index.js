@@ -236,21 +236,7 @@ AlexaGoogleSearch.prototype.intentHandlers = {
 				}
             }
 			
-			//translation
-			if (!found && $('._Ejb',body).length>0){
-
-				found = $('._Ejb',body).html();
-				console.log("Found name list");
-			}
-			
-			//medical
-			if (!found && $('._NId',body).length>0){
-
-				found = $('._NId',body).html();
-				console.log("Found name list");
-			}
-
-                        			//name list
+                   	//name list
 			if (!found && $('#_vBb',body).length>0){
 
 				found = $('#_vBb',body).html();
@@ -287,14 +273,14 @@ AlexaGoogleSearch.prototype.intentHandlers = {
 			//instant + description 2
 			if (!found && $('._o0d',body).length>0){
                 
-                console.log("Found Found instant and desc 2")
+                		console.log("Found Found instant and desc 2")
 				var tablehtml = $('._o0d',body).html()
                 
-                found = tablehtml // fallback in case a table isn't found
+                		found = tablehtml // fallback in case a table isn't found
                 
-                xray(tablehtml, ['table@html'])(function (conversionError, tableHtmlList) {
+                		xray(tablehtml, ['table@html'])(function (conversionError, tableHtmlList) {
 
-                if (tableHtmlList){
+                		if (tableHtmlList){
 
                                   // xray returns the html inside each table tag, and tabletojson
                                   // expects a valid html table, so we need to re-wrap the table.
@@ -349,13 +335,13 @@ AlexaGoogleSearch.prototype.intentHandlers = {
                                     console.log('Found :' + found)
                                 }
 
-                if (conversionError){
-                    console.log("There was a conversion error: " + conversionError);
-                }
+                		if (conversionError){
+                    			console.log("There was a conversion error: " + conversionError);
+                		}
 
  
                 
-              });
+              			});
 			}
 
 			//Time, Date
@@ -370,6 +356,20 @@ AlexaGoogleSearch.prototype.intentHandlers = {
 				found = $('.nobr>.r',body).html();
 				console.log("Found maths");					
 			}
+			
+^			//translation
+			if (!found && $('._Ejb',body).length>0){
+
+				found = $('._Ejb',body).html();
+				console.log("Found translation");
+			}
+			
+			//medical el al.
+			if (!found && $('._NId',body).length>0){
+
+				found = $('._NId',body).html();
+				console.log("Found medical et al.");
+			}			
 
 			//simple answer
 			if (!found && $('.obcontainer',body).length>0){
