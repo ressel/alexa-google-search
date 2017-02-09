@@ -45,7 +45,7 @@ var localeResponseDE = [
 // Create google search URL - this made up of the main search URL plus a languange modifier (currently only needed for German)
 
 var localeGoogleENGB = ["http://www.google.co.uk/search?q=","&hl=en-GB"];
-var localeGoogleDE = ["http://www.google.com/search?q=","&hl=de"];
+var localeGoogleDE = ["http://www.google.de/search?q=","&hl=de"];
 var localeGoogleENUS = ["http://www.google.com/search?q=",""];
 
 var sessionLocale = '';
